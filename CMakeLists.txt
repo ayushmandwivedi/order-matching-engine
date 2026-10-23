@@ -5,10 +5,12 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-# Optimization and warning flags
 add_compile_options(-Wall -Wextra -Wpedantic -O3)
 
 include_directories(include)
 
-# Executable
+# Primary Engine Target
 add_executable(matching_engine src/main.cpp)
+
+# Test Targets
+add_executable(test_price_level tests/test_price_level.cpp)
